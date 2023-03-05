@@ -2,13 +2,13 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-        } else {
-            entry.target.classList.remove('visible');
-        }
+        } //else {
+        //     entry.target.classList.remove('visible');
+        // }
     });
 });
 
-const tableElements = document.querySelectorAll('.tableau');
-tableElements.forEach((tableElement) => {
-    observer.observe(tableElement);
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((Element) => {
+    observer.observe(Element);
 });

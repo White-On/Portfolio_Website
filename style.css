@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 /* Color */
-body{
+body {
     --primary: #222831;
     --secondary: #393E46;
     --tertiary: #00ADB5;
@@ -14,7 +14,7 @@ body{
     --black10: #181A1E, 0.1;
 }
 
-body{
+body {
     background-color: var(--tertiary);
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -23,10 +23,10 @@ body{
     margin: 0 0 0 0;
     /* top margin is forced to be this high for the header */
     margin: 90px 24px 24px 24px;
-    
+
 }
 
-#header-grid{
+#header-grid {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,14 +37,14 @@ body{
     color: var(--primary);
 }
 
-h1{
-    
+h1 {
+
     font-size: 32px;
     font-weight: 700;
     color: var(--primary);
 }
 
-header{
+header {
     position: fixed;
     align-items: center;
     top: 0;
@@ -55,23 +55,23 @@ header{
     box-shadow: 0 0 5px var(--black);
 }
 
-#name-logo{
+#name-logo {
     font-size: 32px;
     font-weight: 700;
     text-decoration: none;
 }
 
-nav ul{
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav ul li{
+nav ul li {
     display: inline-block;
 }
 
-.header-link{
+.header-link {
     text-decoration: none;
     margin-left: 8px;
     margin-right: 8px;
@@ -81,58 +81,62 @@ nav ul li{
     transition: all 0.5s ease-in-out;
 }
 
-.header-link:hover{
+.header-link:hover {
     background: var(--tertiary);
     color: var(--light);
     transition: all 0.5s ease-in-out;
 }
 
-nav ul li img{
+nav ul li img {
     width: 32px;
     height: 32px;
     align-items: center;
 }
 
-#header-icons{
+#header-icons {
     width: 32px;
     height: 32px;
     margin-left: 16px;
 }
 
-section{
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 
-#My-Work{
+#My-Work {
     /* les cartes doivent etre aligné sur l'axe horizontale */
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 40px;
     margin-top: 64px;
     margin-bottom: 64px;
 }
 
-#My-Work img{
-    width: 300px;
-    height: 300px;
+#My-Work img {
+    width: 400px;
+    height: 400px;
     border-radius: 10px;
 }
 
-#My-Work a{
+#My-Work a {
     text-decoration: none;
 }
 
-section h2{
+#My-Work p {
+    width: 400px;
+}
+
+section h2 {
     font-size: 32px;
     font-weight: 700;
     color: var(--primary);
 }
 
-.card-project{
+.card-project {
     display: flex;
     flex-direction: column;
     margin: 16px;
@@ -141,16 +145,44 @@ section h2{
     border-radius: 10px;
     color: var(--light);
     align-items: center;
-    
+    --delayAnimation: 200ms;
+    --transitionTime: 1s;
+
 }
 
-.card-project p{
+.card-project p {
     align-self: self-start;
 }
 
+.hidden {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX(-100%);
+    transition: all var(--transitionTime);
+}
+
+.visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+#My-Work .card-project:nth-child(2) {
+    transition-delay: var(--delayAnimation);
+}
+
+#My-Work .card-project:nth-child(3) {
+    transition-delay: calc(var(--delayAnimation) * 2);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
 
 
-div div h2{
+div div h2 {
     font-size: 20px;
     font-weight: 500;
     color: var(--light);
@@ -158,26 +190,25 @@ div div h2{
 }
 
 
-@media screen and (max-width: 950px){
-    .header-link{
+@media screen and (max-width: 1000px) {
+    .header-link {
         display: none;
         padding: 10px;
     }
 }
 
-@media screen and (max-width: 600px){
-    .header-nav{
+@media screen and (max-width: 600px) {
+    .header-nav {
         display: none;
     }
 
-    #header-grid{
+    #header-grid {
         justify-content: center;
     }
 
-    #name-logo{
+    #name-logo {
         font-size: 24px;
     }
 
 
 }
-
