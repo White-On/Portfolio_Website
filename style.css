@@ -1,0 +1,183 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Color */
+body{
+    --primary: #222831;
+    --secondary: #393E46;
+    --tertiary: #00ADB5;
+    --light: #E9F8F9;
+    --black: #181A1E;
+    --black75: #181A1E 0.75;
+    --black50: #181A1E 0.5;
+    --black25: #181A1E, 0.25;
+    --black10: #181A1E, 0.1;
+}
+
+body{
+    background-color: var(--tertiary);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--light);
+    margin: 0 0 0 0;
+    /* top margin is forced to be this high for the header */
+    margin: 90px 24px 24px 24px;
+    
+}
+
+#header-grid{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 64px 16px 64px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 0 0;
+    color: var(--primary);
+}
+
+h1{
+    
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+header{
+    position: fixed;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: var(--light);
+    box-shadow: 0 0 5px var(--black);
+}
+
+#name-logo{
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+.header-link{
+    text-decoration: none;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 8px;
+    color: var(--primary);
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.header-link:hover{
+    background: var(--tertiary);
+    color: var(--light);
+    transition: all 0.5s ease-in-out;
+}
+
+nav ul li img{
+    width: 32px;
+    height: 32px;
+    align-items: center;
+}
+
+#header-icons{
+    width: 32px;
+    height: 32px;
+    margin-left: 16px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#My-Work{
+    /* les cartes doivent etre aligné sur l'axe horizontale */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+#My-Work img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+#My-Work a{
+    text-decoration: none;
+}
+
+section h2{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.card-project{
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+    padding: 16px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    color: var(--light);
+    align-items: center;
+    
+}
+
+.card-project p{
+    align-self: self-start;
+}
+
+
+
+div div h2{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--light);
+    text-align: center;
+}
+
+
+@media screen and (max-width: 950px){
+    .header-link{
+        display: none;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .header-nav{
+        display: none;
+    }
+
+    #header-grid{
+        justify-content: center;
+    }
+
+    #name-logo{
+        font-size: 24px;
+    }
+
+
+}
+
