@@ -179,6 +179,10 @@ section h2 {
     .hidden {
         transition: none;
     }
+
+    #boidsCanvas{
+        opacity: 0;
+    }
 }
 
 
@@ -213,12 +217,21 @@ div div h2 {
 
 }
 
+#boidsCanvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
 #hero{
     --colorHeroSection: var(var(--light));
     --imageCoverage: 75%;
     --imageSizeIncrease: 2rem;
 }
-#hero {
+#hero{
     
     display: flex;
     flex-direction: row;
