@@ -20,7 +20,6 @@ body {
     font-weight: 400;
     font-size: 16px;
     color: var(--light);
-    margin: 0 0 0 0;
     /* top margin is forced to be this high for the header */
     margin: 90px 24px 24px 24px;
 
@@ -154,6 +153,11 @@ section h2 {
     align-self: self-start;
 }
 
+.card-project a {
+    color: var(--light);
+    text-decoration: none;
+}
+
 .hidden {
     opacity: 0;
     filter: blur(10px);
@@ -173,6 +177,11 @@ section h2 {
 
 #My-Work .card-project:nth-child(3) {
     transition-delay: calc(var(--delayAnimation) * 2);
+}
+
+.work-description{
+    width: 50%;
+    text-align: center  ;
 }
 
 @media(prefers-reduced-motion) {
@@ -250,7 +259,7 @@ div div h2 {
     margin: 0;
 }
 
-#here h2 {
+#hero h2 {
     font-size: 32px;
     font-weight: 500;
     margin: 0;
@@ -260,6 +269,24 @@ div div h2 {
     font-size: 24px;
     font-weight: 400;
     margin: 0;
+}
+
+#hero a {
+    text-decoration: none;
+    color: var(--colorHeroSection);
+}
+
+#hero ul {
+    list-style: none;
+    margin-top: 2rem;
+    padding-left: 4rem;
+    align-content: center;
+    text-align: left;
+    font-size: 24px;
+}
+
+#hero ul li {
+    margin-bottom: 0.5rem;
 }
 
 #hero img {

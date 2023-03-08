@@ -126,7 +126,10 @@ class Vector {
 
 class Boid {
     constructor() {
-        this.position = new Vector(Math.random() + startPosition.x , Math.random() + startPosition.y);
+        // Random position on the canvas
+        this.position = new Vector(Math.random() * boidsCanvas.width , Math.random() * boidsCanvas.height);
+        // Random Position behind the picture
+        // this.position = new Vector(Math.random() + startPosition.x , Math.random() + startPosition.y);
         this.velocity = Vector.random2D();
         this.velocity.setMag(Math.random(2, 4));
         this.acceleration = new Vector();

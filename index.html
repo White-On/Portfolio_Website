@@ -22,9 +22,9 @@
             <div id="name-logo"><b>Jules Cassan</b></div>
             <nav class="header-nav">
                 <ul>
-                    <li><a href="#hero" class="header-link"><b>Home</b></a></li>
+                    <li><a href="#" class="header-link"><b>Home</b></a></li>
                     <li><a href="#About" class="header-link"><b>About</b></a></li>
-                    <li><a href="#My-Work" class="header-link"><b>My Work</b></a></li>
+                    <li><a href="#myWork" class="header-link"><b>My Work</b></a></li>
                     <li><a href="#Contact" class="header-link"><b>Contact</b></a></li>
                 </ul>
             </nav>
@@ -43,16 +43,22 @@
 
     <section id="hero">
         <div id="short-bio">
-            <div><h1><b>Jules Cassan</b></h1></div>
-            <div><h2><b>Currently in <a href="https://sciences.sorbonne-universite.fr/formation-sciences/masters/master-informatique/parcours-androide">Master ANDROIDE</a></b></h2></div>
+            <div>
+                <h1><b>Jules Cassan</b></h1>
+            </div>
+            <div>
+                <h2><b>Currently in <a
+                            href="https://sciences.sorbonne-universite.fr/formation-sciences/masters/master-informatique/parcours-androide">Master
+                            ANDROIDE</a></b></h2>
+            </div>
             <div>
                 <ul>
                     <li id="age"></li>
-                    <li><b>Computer Science Student</b></li>
-                    <li><b>IA Lover</b></li>
-                    <li><b>Invested and Motivated</b></li>
-                    <li><b>Knowledge seeker</b></li>
-                    <li><b>Looking for oportunities</b></li>
+                    <li><b>Computer Science Student 💻</b></li>
+                    <li><b>IA Lover 🤖</b></li>
+                    <li><b>Invested and Motivated 🤸‍♂️</b></li>
+                    <li><b>Knowledge seeker 📚</b></li>
+                    <li><b>Looking for oportunities 🙋‍♂️</b></li>
                 </ul>
             </div>
         </div>
@@ -60,7 +66,7 @@
             <img src="images/Jules.jpg" alt="picture of Jules" id="Jules-img">
         </div>
     </section>
-    
+
     <canvas id="boidsCanvas"></canvas>
     <script defer src="boids.js"></script>
 
@@ -68,84 +74,122 @@
 
     <section id="Home">
 
-    </section>
+    </section id=>
 
-    <section>
+    <section id="myWork">
         <h2>My Work as a Student</h2>
-        <p>Text</p>
+        <p class="work-description">Here's a sample of my projects I've done as a student. I've been working on various
+            subject surounding Artificial Intelligence,
+            Decision making and Problem solving.
+        </p>
+        <!-- The hidden class is use for the fading in animation -->
         <div id="My-Work">
-            <a href="">
-                <div class="card-project hidden">
-                    <h2><b>Recursive_Tree 🌳🌿🌲</b></h2>
-                    <img src="images/RecursiveTreeNoQuote.gif" alt="Img Projet">
-                    <p>description</p>
-                </div>
-            </a>
+
             <div class="card-project hidden">
-                <h2><b>Wave_Function_Collapse🌊🌊🌊</b></h2>
-                <img src="images/Wave_Function_Collapse_Demo.gif" alt="Img Projet">
-                <p>description</p>
+                <a href="https://github.com/White-On/BIMA_Notebook">
+                    <h2><b>Basis of image processing 🖼️</b></h2>
+                    <img src="images/BIMAIllustration.gif" alt="Convolution on a picture">
+                    <p>In this course, we've explore various subject surounding image processing such as
+                        <b>Convolution</b>, <b>Frequency filtering</b>, <b>Edge detection</b>, <b>Segmentation</b> and
+                        more
+                    </p>
+                </a>
             </div>
             <div class="card-project hidden">
-                <h2><b>Nom Projet</b></h2>
-                <img src="images/CTScan.png" alt="Img Projet">
-                <p>description</p>
+                <a href="https://github.com/White-On/MAPSI_TME_2022">
+                    <h2><b>Probabilistic and Statistical algorithm</b></h2>
+                    <img src="images/MAPSIIllustration.gif"
+                        alt="Illustration of the Expectation-Maximization algorithm on 2D Gaussian">
+                    <p>An opening to the wide world of statistic and Probability to explore the world of data</p>
+                </a>
+            </div>
+            <div class="card-project hidden">
+                <a href="https://github.com/MRVNY/Fosyma">
+                    <h2><b>Multi-Agents behavior and algorithm</b></h2>
+                    <img src="images/FOSYMAIllustration.png" alt="Robot Behaviors">
+                    <p>This course is dedicated to understand and develop complex group behavior in different groups of
+                        agents</p>
+                </a>
             </div>
         </div>
         <div id="My-Work">
+
             <div class="card-project hidden">
-                <h2><b>MicroGrad</b></h2>
-                <img src="images/MicroGrad.png" alt="Img Projet">
-                <p>description</p>
+                <a href="https://github.com/jdufou1/P-ANDROIDE">
+                    <h2><b>Assistance to driving vehicle 🚘</b></h2>
+                    <img src="images/PANDROIDEIllustration.gif" alt="Car simulation on Pygame">
+                    <p>This project was a fairly simple simulation of a driving vehicle following the driving line</p>
+                </a>
             </div>
             <div class="card-project hidden">
-                <h2><b>Nom Projet</b></h2>
-                <img src="images/CTScan.png" alt="Img Projet">
-                <p>description</p>
+                <a href="https://github.com/White-On/Wordle">
+                    <h2><b>Wordle Solver 📇🧬</b></h2>
+                    <img src="images/WordleIllustration.png" alt="Explanation of the genetic algorithm">
+                    <p>This is a classic wordle solver with some added constraints solved by two different algorithm</p>
+                </a>
             </div>
             <div class="card-project hidden">
-                <h2><b>Nom Projet</b></h2>
-                <img src="images/CTScan.png" alt="Img Projet">
-                <p>description</p>
+                <a href="https://github.com/MRVNY/MOGPL">
+                    <h2><b>Modeling and linear program 🧩</b></h2>
+                    <img src="images/MOGPLIllustration.png" alt="a Graph to illustration a flow problem">
+                    <p>This Course was all around thinking outside the box and trying to solve problems through another
+                        perspective</p>
+                </a>
             </div>
         </div>
 
         <h2>Personnal Work / Explorations</h2>
-        <p>Text</p>
+        <p class="work-description">These are some of my personnal project. I always want to look for something new to
+            work on and experiments with.
+            But some of those are direct replicat or slight modification of other project I've seen on the internet.
+        </p>
         <div id="My-Work">
-            <a href="">
-                <div class="card-project hidden">
+            <div class="card-project hidden">
+                <a href="https://github.com/White-On/Recursive_Tree">
                     <h2><b>Recursive_Tree 🌳🌿🌲</b></h2>
-                    <img src="images/RecursiveTreeNoQuote.gif" alt="Img Projet">
-                    <p>description</p>
-                </div>
-            </a>
-            <div class="card-project hidden">
-                <h2><b>Wave_Function_Collapse🌊🌊🌊</b></h2>
-                <img src="images/Wave_Function_Collapse_Demo.gif" alt="Img Projet">
-                <p>description</p>
+                    <img src="images/RecursiveTreeNoQuote.gif" alt="Recursive Tree animation">
+                    <p>A little experiment around recursive pattern forming Tree and the L-System</p>
+                </a>
             </div>
+
+
             <div class="card-project hidden">
-                <h2><b>CT_Scan🧫💊🧠</b></h2>
-                <img src="images/CTScan.png" alt="Img Projet">
-                <p>description</p>
+                <a href="https://github.com/White-On/Basic_Wave_Function_Collapse">
+                    <h2><b>Wave_Function_Collapse🌊🌊🌊</b></h2>
+                    <img src="images/Wave_Function_Collapse_Demo.gif"
+                        alt="Generation of a picture with Wave Function collapse">
+                    <p>I did this project to train myself with Python interface tools (tkinter) and procedural
+                        generation</p>
+                </a>
+            </div>
+
+
+            <div class="card-project hidden">
+                <a href="https://github.com/White-On/SelfDrivingCar-1.1">
+                    <h2><b>Self Driving Car 🚘</b></h2>
+                    <img src="images/SelfDrivingIllustration.gif" alt="SelfDriving simulation with traffic">
+                    <p>I've was eager to learn a bit of javascript and neural network. And with a previous experience on
+                        another project around self Driving car, I tried this one out.</p>
+                </a>
             </div>
         </div>
         <div id="My-Work">
             <div class="card-project hidden">
                 <h2><b>MicroGrad🤖📏📊</b></h2>
-                <img src="images/MicroGrad.png" alt="Img Projet">
-                <p>description</p>
+                <img src="images/MicroGrad.png" alt="A graphics describing MicroGrad">
+                <p>A learning project based on <a href="https://youtu.be/VMj-3S1tku0"><b>Andrej Karpathy's video</b></a>
+                </p>
             </div>
             <div class="card-project hidden">
                 <h2><b>CT_Scan🧫💊🧠</b></h2>
-                <img src="images/CTScan.png" alt="Img Projet">
-                <p>description</p>
+                <img src="images/CTScan.png" alt="A CT scan of lungs">
+                <p>A learning project based on <a href="https://youtu.be/qfAS8seVYvU"><b>Mr. P Solver's video</b></a></p>
             </div>
             <div class="card-project hidden">
-                <h2><b>CT_Scan🧫💊🧠</b></h2>
-                <img src="images/CTScan.png" alt="Img Projet">
-                <p>description</p>
+                <h2><b>Generatively Pretrained Transformer</b></h2>
+                <img src="images/GPTIllustration.png" alt="Model Architecture of a GPT">
+                <p>A learning project based on <a href="https://youtu.be/kCc8FmEb1nY"><b>Andrej Karpathy's video</b></a>
+                </p>
             </div>
     </section>
 </body>
