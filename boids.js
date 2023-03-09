@@ -134,7 +134,7 @@ class Boid {
         this.velocity.setMag(Math.random(2, 4));
         this.acceleration = new Vector();
         this.maxForce = 0.2;
-        this.maxSpeed = 3;
+        this.maxSpeed = 2.5;
         this.perceptionRadius = 100;
         this.sprite = new Image();
         this.sprite.src = "images/boid.png";
@@ -260,7 +260,7 @@ class Boid {
         // context.lineTo(points[2].x, points[2].y);
         // context.fill();
 
-        context.drawImage(this.sprite, this.position.x - 10, this.position.y - 10, 20, 20);
+        context.drawImage(this.sprite, this.position.x - 10, this.position.y - 10, 17, 24);
     }
 
     run(boids) {

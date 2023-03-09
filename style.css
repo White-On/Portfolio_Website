@@ -12,6 +12,8 @@ body {
     --black50: #181A1E 0.5;
     --black25: #181A1E, 0.25;
     --black10: #181A1E, 0.1;
+
+    --space-between-sections: 10rem;
 }
 
 body {
@@ -21,7 +23,7 @@ body {
     font-size: 16px;
     color: var(--light);
     /* top margin is forced to be this high for the header */
-    margin: 90px 24px 24px 24px;
+    margin: 90px 0px 0px 0px;
 
 }
 
@@ -77,13 +79,13 @@ nav ul li {
     padding: 8px;
     color: var(--primary);
     border-radius: 10px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .header-link:hover {
     background: var(--tertiary);
     color: var(--light);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 nav ul li img {
@@ -104,6 +106,10 @@ section {
     align-items: center;
 }
 
+#myWork {
+    margin-block: var(--space-between-sections);
+}
+
 
 #My-Work {
     /* les cartes doivent etre aligné sur l'axe horizontale */
@@ -111,8 +117,8 @@ section {
     justify-content: center;
     align-items: center;
     gap: 40px;
-    margin-top: 64px;
-    margin-bottom: 64px;
+    margin-top: 32px;
+    margin-bottom: 32px;
 }
 
 #My-Work img {
@@ -144,6 +150,7 @@ section h2 {
     border-radius: 10px;
     color: var(--light);
     align-items: center;
+    box-shadow: 10px 10px 10px var(--black);
     --delayAnimation: 200ms;
     --transitionTime: 1s;
 
@@ -250,7 +257,7 @@ div div h2 {
     height: 90vh;
     color: var(--colorHeroSection);
     text-align: center;
-    margin-bottom: 10rem;
+    margin-bottom: var(--space-between-sections);
 }
 
 #hero h1 {
@@ -310,4 +317,32 @@ div div h2 {
 #short-bio a{
     text-decoration: none;
     color:var(--colorHeroSection);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: var(--primary);
+    color: var(--light);
+    margin-top: var(--space-between-sections);
+    padding-top: 4rem;  
+    box-shadow: inset 0px 0px 50px 0px rgba(0,0,0,0.75);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--light);
+}
+
+footer h2{
+    font-size: 32px;
+    font-weight: 700;;
+    border: 4px solid var(--black);
+    border-radius: 20px;
+    padding: 16px 32px;
+    margin: 0;
+    background-image: linear-gradient(45deg, var(--secondary),var(--tertiary));
 }
