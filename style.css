@@ -301,6 +301,7 @@ div div h2 {
     color: var(--colorHeroSection);
     text-align: center;
     margin-bottom: var(--space-between-sections);
+    /* perspective: 1000px; */
 }
 
 #hero h1 {
@@ -345,7 +346,8 @@ div div h2 {
     min-width: 300px;
     min-height: 300px;
     object-fit: cover;
-    rotate: -7deg;
+    rotate: -7deg; 
+    
     border-radius: 10px;
     border: 5px solid var(--light);
     transition: all 0.5s ease-in-out;
@@ -354,6 +356,8 @@ div div h2 {
 #hero img:hover {
     width: calc(var(--imageCoverage) + var(--imageSizeIncrease));
     height: calc(var(--imageCoverage) + var(--imageSizeIncrease));
+    transform: rotateX(-7deg) rotateY(-12deg) rotateZ(0deg);
+    box-shadow: 10px 10px 10px var(--black);
     transition: all 0.5s ease-in-out;
 }
 
@@ -390,8 +394,8 @@ footer {
     
     padding: 2rem;
     border-radius: 20px;
-    background-color: rgba(0,0,0,0.5);
-    backdrop-filter: blur(40px);
+    background-color: rgba(139, 139, 139, 0.5);
+    /* backdrop-filter: blur(40px); */
 }
 
 footer a {
@@ -431,6 +435,8 @@ footer h2{
     height: 3rem;
 }
 
+/* Scrollbar */
+
 ::-webkit-scrollbar {
     width: 1rem;
 }
@@ -448,4 +454,22 @@ footer h2{
 
 ::-webkit-scrollbar-thumb:active {
     background: var(--tertiary);
+}
+
+/* Glass panel */
+
+.glass-panel {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    background-blend-mode: soft-light;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 4rem;
+    margin: 2rem;
+    transform: rotateX(45deg) rotateY(20deg) rotateZ(0deg);
+    border-style: inset;
+    border-width: 0.15rem;
+    border-color: transparent transparent #ffffff8a #ffffff8a ;
 }
