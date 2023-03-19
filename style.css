@@ -182,31 +182,38 @@ section {
 
 #myWork {
     margin-block: var(--space-between-sections);
+    margin-inline: 3rem;
+    --img-size: 300px;
 }
 
 
 #My-Work {
     /* les cartes doivent etre aligné sur l'axe horizontale */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    margin-top: 32px;
-    margin-bottom: 32px;
+    display: grid;
+    gap : 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 #My-Work img {
-    width: 400px;
-    height: 400px;
+    width: var(--img-size);
+    height: var(--img-size);
     border-radius: 10px;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    box-shadow: 10px 10px 10px var(--black);
+
 }
 
 #My-Work a {
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #My-Work p {
-    width: 400px;
+    width: 100%;
 }
 
 section h2 {
@@ -224,6 +231,7 @@ section h2 {
     border-radius: 10px;
     color: var(--light);
     align-items: center;
+    justify-content: center;
     box-shadow: 10px 10px 10px var(--black);
     --delayAnimation: 200ms;
     --transitionTime: 1s;
@@ -252,13 +260,25 @@ section h2 {
     transform: translateX(0);
 }
 
-#My-Work .card-project:nth-child(2) {
-    transition-delay: var(--delayAnimation);
+@media screen and (min-width: 1376px) {
+    #My-Work .card-project:nth-child(2) {
+        transition-delay: var(--delayAnimation);
+    }
+    
+    #My-Work .card-project:nth-child(3) {
+        transition-delay: calc(var(--delayAnimation) * 2);
+    }
+    
+    #My-Work .card-project:nth-child(5) {
+        transition-delay: var(--delayAnimation);
+    }
+    
+    #My-Work .card-project:nth-child(6) {
+        transition-delay: calc(var(--delayAnimation) * 2);
+    }
 }
 
-#My-Work .card-project:nth-child(3) {
-    transition-delay: calc(var(--delayAnimation) * 2);
-}
+
 
 .work-description{
     width: 50%;
@@ -288,15 +308,15 @@ div div h2 {
 
 #boidsCanvas{
     position: absolute;
-    top: 0;
+    top: 50px;
     left: 0;
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
     z-index: -1;
 }
 
 #hero{
-    --colorHeroSection: var(var(--light));
+    --colorHeroSection: var(--light);
     --imageCoverage: 65%;
     --imageSizeIncrease: 2rem;
 }
@@ -308,9 +328,10 @@ div div h2 {
     justify-content: center;
     align-items: top;
     gap: 10rem;
-    height: 90vh;
+    /* height: 90vh; */
     color: var(--colorHeroSection);
     text-align: center;
+    margin-top: var(--space-between-sections);
     margin-bottom: var(--space-between-sections);
 }
 
@@ -479,6 +500,13 @@ footer h2{
     background-image: -moz-linear-gradient(45deg, var(--secondary),var(--tertiary));
     width: 3rem;
     height: 3rem;
+}
+
+@media screen and (max-width: 700px) {
+    #footer-grid {
+        flex-direction: column;
+        gap: 2rem;
+    }
 }
 
 /* Scrollbar */

@@ -1,16 +1,24 @@
 const boidsCanvas = document.getElementById('boidsCanvas');
+const HeroSection = document.getElementById('hero');
 let initPosition = document.getElementById('Jules-img');
 initPosition = initPosition.getBoundingClientRect();
 
 let startPosition = { x :(initPosition.width / 2) + initPosition.x,
                    y : (initPosition.height / 2) + initPosition.y };
 
-console.log(startPosition);
+console.log(HeroSection.getBoundingClientRect());
 
-boidsCanvas.height = window.innerHeight;
-boidsCanvas.width = window.innerWidth;
+const margin = 150;
+
+// boidsCanvas.height = window.innerHeight;
+// boidsCanvas.width = window.innerWidth;
+
+boidsCanvas.height = HeroSection.getBoundingClientRect().height + margin;
+boidsCanvas.width = HeroSection.getBoundingClientRect().width;
 
 const boidsContext = boidsCanvas.getContext('2d');
+
+// console.log(boidsCanvas.height);
 
 const alignmentStrength = 1;
 const cohesionStrength = 1;
@@ -279,8 +287,8 @@ animate();
 
 
 function animate(time){
-    boidsCanvas.height = window.innerHeight;
-    boidsCanvas.width = window.innerWidth;
+    boidsCanvas.height = HeroSection.getBoundingClientRect().height + margin;
+    boidsCanvas.width = HeroSection.getBoundingClientRect().width;
 
     boids.run();
 
