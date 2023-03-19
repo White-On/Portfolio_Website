@@ -136,6 +136,7 @@ section {
     margin-block: var(--space-between-sections);
 }
 
+
 #About h2{
     font-size: 32px;
     font-weight: 700;
@@ -205,7 +206,24 @@ section {
 
 }
 
-#My-Work a {
+@media screen and (max-width: 420px) {
+    #My-Work img {
+        width: calc(var(--img-size) *0.7);
+        height: calc(var(--img-size) *0.7);
+    }
+
+    #My-Work{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    }
+
+    #myWork {
+        margin-inline: 1rem;
+    }
+
+}
+
+.card-project>a {
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -285,6 +303,13 @@ section h2 {
     text-align: center  ;
 }
 
+@media screen and (max-width: 768px) {
+    .work-description{
+        width: 80%;
+    }
+}
+    
+
 @media(prefers-reduced-motion) {
     .hidden {
         transition: none;
@@ -302,9 +327,6 @@ div div h2 {
     color: var(--light);
     text-align: center;
 }
-
-
-
 
 #boidsCanvas{
     position: absolute;
@@ -331,8 +353,13 @@ div div h2 {
     /* height: 90vh; */
     color: var(--colorHeroSection);
     text-align: center;
-    margin-top: var(--space-between-sections);
-    margin-bottom: var(--space-between-sections);
+    margin-block: var(--space-between-sections); ;
+}
+
+@media screen and (max-width: 768px) {
+    #hero{
+        margin-top: 3rem;
+    }
 }
 
 #hero h1 {
@@ -409,6 +436,13 @@ div div h2 {
     margin-inline: 2rem;
 }
 
+@media screen and (max-width: 768px) {
+    #short-bio{
+        margin-inline: 0rem;
+    }
+}
+
+
 #short-bio a{
     text-decoration: none;
     color:var(--colorHeroSection);
@@ -468,9 +502,14 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    
-    padding: 2rem;
 }
+
+@media screen and (max-width: 768px) {
+    #footer-content{
+        gap: 0.5rem;
+    }
+}
+    
 
 footer a {
     text-decoration: none;
@@ -514,6 +553,15 @@ footer h2{
         flex-direction: column;
         gap: 2rem;
     }
+
+    footer h2{
+        font-size: 24px;
+    }
+
+    .footer-icons {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 }
 
 /* Scrollbar */
@@ -542,12 +590,19 @@ footer h2{
 .glass-panel {
     background-color: rgba(255, 255, 255, 0.3);
     background-blend-mode: soft-light;
+    -webkit-backdrop-filter: blur(11px);
     backdrop-filter: blur(11px);
     border-radius: 20px;
     padding: 4rem;
-    margin: 2rem;
     transform: rotateX(20deg) rotateY(20deg) rotateZ(0deg);
     border-style: inset;
     border-width: 0.15rem;
     border-color: transparent transparent #ffffff8a #ffffff8a ;
+}
+
+
+@media screen and (max-width: 600px) {
+    .glass-panel {
+        padding: 0.5rem;
+    }
 }
