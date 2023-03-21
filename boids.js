@@ -6,7 +6,7 @@ initPosition = initPosition.getBoundingClientRect();
 let startPosition = { x :(initPosition.width / 2) + initPosition.x,
                    y : (initPosition.height / 2) + initPosition.y };
 
-console.log(HeroSection.getBoundingClientRect());
+// console.log(HeroSection.getBoundingClientRect());
 
 const margin = 150;
 
@@ -289,6 +289,10 @@ animate();
 function animate(time){
     boidsCanvas.height = HeroSection.getBoundingClientRect().height + margin;
     boidsCanvas.width = HeroSection.getBoundingClientRect().width;
+
+    // const wave = document.getElementsByClassName("wave1")
+    // // we put the wave at the bottom of the canvas
+    // wave[0].style.top =  -200 * boidsCanvas.height + boidsCanvas.height + "px";
 
     boids.run();
 

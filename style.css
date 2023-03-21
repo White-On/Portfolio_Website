@@ -7,6 +7,8 @@ body {
     --secondary: #393E46;
     --tertiary: #00ADB5;
     --light: #E9F8F9;
+    --purple: #66347F;
+    --orange: #D27685;
     --black: #181A1E;
     --black75: #181A1E 0.75;
     --black50: #181A1E 0.5;
@@ -17,7 +19,7 @@ body {
 }
 
 body {
-    background-color: var(--tertiary);
+    background-color: var(--purple);
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -132,8 +134,11 @@ section {
     
 }
 #About{
-    margin-inline: 3rem;
-    margin-block: var(--space-between-sections);
+    padding-inline: 3rem;
+    padding-top: 0;
+    padding-bottom: var(--space-between-sections);
+    
+    background-color: var(--purple);
 }
 
 
@@ -182,8 +187,9 @@ section {
 
 
 #myWork {
-    margin-block: var(--space-between-sections);
-    margin-inline: 3rem;
+    padding-block: var(--space-between-sections);
+    padding-inline: 3rem;
+    background-color: var(--orange);
     --img-size: 300px;
 }
 
@@ -353,7 +359,9 @@ div div h2 {
     /* height: 90vh; */
     color: var(--colorHeroSection);
     text-align: center;
-    margin-block: var(--space-between-sections); ;
+    /* margin-block: var(--space-between-sections); */
+    margin-top : var(--space-between-sections);
+    padding-bottom: 10rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -389,7 +397,7 @@ div div h2 {
     system: fixed;
     symbols: ⏰ 💻 🤖 🤸‍♂️ 📚 🙋‍♂️; 
     suffix: " ";
-  }
+}
 
 #hero ul {
     list-style-type: disc;
@@ -485,10 +493,10 @@ footer {
     gap: 1rem;
     /* background-color: var(--primary); */
     color: var(--light);
-    margin-top: var(--space-between-sections);
+    /* margin-top: var(--space-between-sections); */
     padding-top: 4rem;  
     padding-bottom: 4rem;
-    box-shadow: inset 0px 0px 50px 0px rgba(0,0,0,0.85);
+    box-shadow: inset 0px 0px 50px 20px rgba(0,0,0,0.85);
 
     background-image: url(images/backgroud-footer.jpg);
     background-size: cover;
@@ -605,4 +613,53 @@ footer h2{
     .glass-panel {
         padding: 0.5rem;
     }
+}
+
+.spacer {
+    aspect-ratio: 1200/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.wave1 {
+    background-image: url(assets/wave1.svg);
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    transform: translate(0, -10rem);
+}
+
+@media screen and (max-width: 850px) {
+    .wave1 {
+        transform: translate(0, -2.6rem);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wave1 {
+        transform: translate(0, -1rem);
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .wave1 {
+        transform: translate(0, 0.5rem);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .wave1 {
+        transform: translate(0, 2rem);
+    }
+}
+    
+    
+.wave2 {
+    background-image: url(assets/wave2.svg);
+}
+
+.wave3 {
+    background-image: url(assets/wave3.svg);
 }
