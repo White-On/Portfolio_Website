@@ -628,7 +628,13 @@ footer h2{
     z-index: 1;
     margin: 0;
     padding: 0;
-    transform: translate(0, -10rem);
+    transform: translate(0, -15rem);
+}
+
+@media screen and (max-width: 1200px) {
+    .wave1 {
+        transform: translate(0, -10rem);
+    }
 }
 
 @media screen and (max-width: 850px) {
