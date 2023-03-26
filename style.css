@@ -128,7 +128,7 @@ section {
 #about-grid{
     display: grid;
     width: clamp(300px, 80%, 1000px);
-    gap : 2rem;
+    gap : 3rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: 300px;
     
@@ -172,17 +172,54 @@ section {
     background-repeat: no-repeat;
     
     will-change: auto;
+
+    transition: all 0.4s ease-in-out;
 }
 
-.card-about>p{
+.card-about{
     font-weight: 700;
     color: var(--light);
     border-radius: 10px;
     border-width: 1px;
-
-    -webkit-backdrop-filter: blur(0.2rem);
-    backdrop-filter: blur(0.2rem);
     
+}
+
+.card-about:hover{
+    transform: scale(1.1);
+    background-blend-mode: multiply;
+    transition: all 0.4s ease-in-out;
+}
+
+.card-title{
+    -webkit-backdrop-filter: blur(11px);
+    backdrop-filter: blur(11px);
+    border-radius: 10px;
+    font-size: clamp(1.5rem, 2rem, 3rem);
+    font-weight: 700;
+    color: var(--light);
+    margin-bottom: 1rem;
+    
+}
+
+.card-about .card-description{
+    display : none;
+    transition: all 1s ease-in-out;
+    
+}
+
+.card-about:hover .card-description{
+    display : contents;
+    transition: all 1s ease-in-out;
+}
+
+.card-about:hover .card-title{
+    display : none;
+    transition: all 1s ease-in-out;
+}
+
+.card-about .card-title{
+    transition: all 1s ease-in-out;
+    display : contents;
 }
 
 @media screen and (min-width: 768px) {
