@@ -168,6 +168,11 @@ h1 {
     margin-inline: 2rem;
 }
 
+#short-bio ul{
+    max-width: 500px; 
+    overflow: auto; 
+}
+
 @media screen and (max-width: 768px) {
     #short-bio{
         margin-inline: 0rem;
