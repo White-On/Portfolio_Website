@@ -664,7 +664,7 @@ footer h2{
     backdrop-filter: blur(11px);
     border-radius: 20px;
     padding: 4rem;
-    transform: rotateX(20deg) rotateY(20deg) rotateZ(0deg);
+    transform: rotateX(15deg) rotateY(15deg) rotateZ(0deg);
     border-style: inset;
     border-width: 0.15rem;
     border-color: transparent transparent #ffffff8a #ffffff8a ;

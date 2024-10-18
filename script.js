@@ -13,6 +13,6 @@ hiddenElements.forEach((Element) => {
     observer.observe(Element);
 });
 
-let age = Date.now() - new Date(2000, 10, 7);
+let age = Date.now() - new Date(2000, 9, 7);
 ageDiv = document.getElementById('age');
 ageDiv.innerHTML = "<b>Age : " +Math.floor(age / 31536000000)+" ⏰</b>";
