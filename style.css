@@ -483,6 +483,10 @@ section h2 {
     text-decoration: none;
 }
 
+.card-project img {
+    background-color: var(--light);
+}
+
 .hidden {
     opacity: 0;
     filter: blur(10px);
