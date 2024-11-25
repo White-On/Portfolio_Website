@@ -228,6 +228,14 @@ header {
     text-decoration: none;
 }
 
+#name-logo a {
+    color: inherit; 
+    text-decoration: none;
+    font-size: inherit; 
+    font-weight: inherit; 
+    
+}
+
 nav ul {
     list-style: none;
     margin: 0;
