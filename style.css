@@ -508,7 +508,7 @@ section h2 {
     transform: translateX(0);
 }
 
-@media screen and (min-width: 1376px) {
+/* @media screen and (min-width: 1376px) {
     #My-Work .card-project:nth-child(2) {
         transition-delay: var(--delayAnimation);
     }
@@ -524,8 +524,42 @@ section h2 {
     #My-Work .card-project:nth-child(6) {
         transition-delay: calc(var(--delayAnimation) * 2);
     }
+} */
+
+@media screen and (min-width: 1376px) {
+    #My-Work .card-project:nth-child(3n+1) {
+        transition-delay: var(--delayAnimation);
+    }
+    
+    #My-Work .card-project:nth-child(3n+2) {
+        transition-delay: calc(var(--delayAnimation) * 2);
+    }
+    
+    #My-Work .card-project:nth-child(3n+3) {
+        transition-delay: calc(var(--delayAnimation) * 3);
+    }
 }
 
+
+@media screen and (min-width: 926px) and (max-width: 1375px) {
+    #My-Work .card-project:nth-child(2n+1) {
+        transition-delay: var(--delayAnimation);
+    }
+    
+    #My-Work .card-project:nth-child(2n+2) {
+        transition-delay: calc(var(--delayAnimation) * 2);
+    }
+}
+
+@media screen and (min-width: 926px) and (max-width: 1375px) {
+    #My-Work .card-project:nth-child(2n+1) {
+        transition-delay: var(--delayAnimation);
+    }
+    
+    #My-Work .card-project:nth-child(2n+2) {
+        transition-delay: calc(var(--delayAnimation) * 2);
+    }
+}
 
 
 .work-description{
