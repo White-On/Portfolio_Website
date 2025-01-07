@@ -68,7 +68,7 @@ h1 {
 
 #hero{
     --colorHeroSection: var(--light);
-    --imageCoverage: 65%;
+    --imageCoverage: 45%;
     --imageSizeIncrease: 2rem;
 }
 
@@ -131,8 +131,8 @@ h1 {
     align-content: center;
     text-align: left;
     font-size: 24px;
-    max-width: 600px; 
-    overflow: auto;
+    /* max-width: 600px; 
+    overflow: auto; */
 }
 
 #hero ul li {
@@ -161,7 +161,7 @@ h1 {
 }
 
 #short-bio{
-    min-width: 500px;
+    min-width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
